@@ -1,33 +1,62 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+
+function App() {  
+
+  const name="John Doe";
+  const profession="Full Stack Developer";
+  const Projects=[
+    {
+      title: "Project One",
+      description:"A web application built using react",
+      link:"#"
+  },{
+    title: "Project Two",
+      description:"A web application built using react",
+      link:"#"
+  },{
+    title: "Project Three",
+      description:"A web application built using react",
+      link:"#"
+  }
+  ]
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <div className='App'>
+      <header className='header'>
+      <h1>{name}</h1>
+      <p>{profession}</p>
+      <nav className='links'>
+        <a href="#about">About</a>
+        <a href='#project'>Project</a>
+        <a href='#contact'>Contact</a>
+      </nav>
+      </header>
+      {/* About Section */}
+      <section id='about' className='about-section'>
+        <h2>About Me</h2>
+        <p>Hello! I am {name}, a passionate {profession}</p>
+      </section>
+      <section id='project' className='project-section'>
+        <h2>Project</h2>
+        <div className='project-list'>
+            {Projects.map((Project,index)=>(
+              <div key={index} className='project-item'>
+                <h3>{Project.title}</h3>
+                <h3>{Project.description}</h3>
+              </div>
+            ))}
+        </div>
+      </section>
+      <section id='contact' className='contact-section'>
+          <h2>Contact Me</h2>
+          <p>If you would like to get in touch, feel free to contact me <a href="mailto:garygodwin234@gmail.com">johndoe@example.com</a></p>
+      </section>
+      <footer className='footer'>
+            <p>2025, All </p>
+      </footer>
+    </div>
     </>
   )
 }
