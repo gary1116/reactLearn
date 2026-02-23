@@ -3,23 +3,33 @@ import './App.css'
 import ContactSection from './ContactSection'
 import Header from './Header'
 import ProjectSection from './ProjectSection'
+import ProfileCard from './ProfileCard'
 
 
 function App() {  
-  const name="John Doe";
-  const profession="Full Stack Developer";
+
+  const handleHobbyClick = (hobby)=>{
+        alert(`you clicked on : ${hobby}`);
+  }
+
 
   return (
     <>
     <div className='App'>
-      <Header name={name} profession={profession}/>
-      {/* About Section */}
-      <Aboutsection  name={name} profession={profession} />
-      <ProjectSection/>
-      <ContactSection/>
-      <footer className='footer'>
-            <p>2025, All </p>
-      </footer>
+      <ProfileCard name={"Gary"} 
+      profession="developer" 
+      isMember={true} 
+      Hobbies={['Reading', 'writing']}
+      onHobbyClick={handleHobbyClick}
+      />
+
+      <ProfileCard name={"Gaurav"} 
+      profession="engineer" 
+      isMember={false} 
+      Hobbies={['cycling', 'swimming']}
+      onHobbyClick={handleHobbyClick}
+
+      />
     </div>
     </>
   )
