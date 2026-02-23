@@ -1,35 +1,20 @@
-import Aboutsection from './Aboutsection'
 import './App.css'
-import ContactSection from './ContactSection'
-import Header from './Header'
-import ProjectSection from './ProjectSection'
-import ProfileCard from './ProfileCard'
-
+import { useState } from 'react';
 
 function App() {  
 
-  const handleHobbyClick = (hobby)=>{
-        alert(`you clicked on : ${hobby}`);
-  }
+  const [count, setCount]=useState(0);
 
+  if(count<0){
+    alert(`count is less than 0 now you dumb fuck`);
+  }
 
   return (
     <>
     <div className='App'>
-      <ProfileCard name={"Gary"} 
-      profession="developer" 
-      isMember={true} 
-      Hobbies={['Reading', 'writing']}
-      onHobbyClick={handleHobbyClick}
-      />
-
-      <ProfileCard name={"Gaurav"} 
-      profession="engineer" 
-      isMember={false} 
-      Hobbies={['cycling', 'swimming']}
-      onHobbyClick={handleHobbyClick}
-
-      />
+     <h1>Counter Value: {count}</h1>
+     <button className='buttonStyle' onClick={()=>{setCount(count+1)}}>Increment</button>
+     <button className='buttonStyle' onClick={()=>{setCount(count-1)}}>Decrement</button>
     </div>
     </>
   )
