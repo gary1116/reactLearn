@@ -4,87 +4,25 @@
   box-sizing:border-box;
 }
 
-body {
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: #f5f7fb;
-  color: #111;
-  line-height: 1.6;
-}
-
-.header{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-
-  background-color: chocolate;
-  padding: 20px;
-}
-
-.links{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 20px;
-  font-size: large;
-}
-
-a {
-  text-decoration: none;   /* removes underline */
-  color: black;            /* always black */
-}
-
-a:hover{
-  color: white;
-}
-
-.about-section{
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 30px;
-padding: 10px;
-background-color: darkcyan;
-
-}
-.about-section p:hover{
-color: #f5f7fb;
-}
-
-.project-section{
+.form-container{
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: 20px;
-  background-color: aquamarine;
-}
-
-.project-item{
-  display: flex;
-  flex-direction:column;
-  justify-content: flex-start;
+  border: 3px solid black;
   padding: 10px;
-
-}
-
-.App{
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-.profileCard{
   margin: 10px;
-  padding: 20px;
-  border: 4px solid #6c93e0;
+  background-color: antiquewhite;
 }
 
-.buttonStyle{
-  margin: 10px;
-  padding: 5px;
-  border-radius: 5px;
-  border-color: burlywood;
-  background-color: rgb(241, 126, 103);
-  color: #f5f7fb;
+label{
+  padding: 10px;
+}
+p{
+  padding: 10px;
+}
+
+.form-data{
+  border: 4px solid rgb(100, 166, 237);
+  background-color: azure;
 }
