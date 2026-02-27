@@ -3,22 +3,34 @@ import { useState } from 'react';
 
 function App() {  
 
-  const [count, setCount]=useState(0);
-  const [step, setStep] =useState(1);
-
-  if(count<0){
-    alert(`count is less than 0 now you dumb fuck`);
+  const [counters,setCounters]=useState([{id:1,value:0}]);
+  const addCounters=()=>{
+    setCounters(previousCounter=>[...previousCounter,{id:previousCounter.length+1,value:0}]);
   }
 
+const incrementCounter = (id) => {
+    setCounters(prev =>
+      prev.map(counter =>
+        counter.id === id
+          ? { ...counter, value: counter.value + 1 }
+          : counter
+      )
+    );
+  };
   return (
     <>
     <div className='App'>
-     <h1>Counter Value: {count}</h1>
-
-     <button className='buttonStyle' onClick={()=>{setCount(count+step)}}>Increment</button>
-     <button className='buttonStyle' onClick={()=>{setCount(count-step)}}>Decrement</button>
-    <input type="number" value={step}
-    onChange={(e)=>{setStep(parseInt(e.target.value))}}/>
+      <button className='buttonStyle' onClick={addCounters}>Add Counter</button>
+      <ul>
+        {counters.map(counter=>{
+         return (
+          <li key={counter.id}>
+            Counter {counter.id}:{counter.value}
+            <button className='buttonStyle' onClick={()=>incrementCounter(counter.id)}>Increment</button>
+          </li>
+          );
+        })}
+      </ul>
     </div>
     </>
   )

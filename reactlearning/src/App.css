@@ -70,7 +70,6 @@ color: #f5f7fb;
 
 .App{
   display: flex;
-  flex-direction: column;
   gap: 20px;
   align-items: center;
 }
