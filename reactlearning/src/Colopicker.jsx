@@ -23,11 +23,9 @@ const Colopicker = () => {
             <div className="color-box" key={index} onClick={()=>handleColorChange(color)} style={{backgroundColor:color}}></div>
         ))}
       </div>
-
         <div className="custom-color-picker">
             <input type="color" name="" id="" value={backgroundColor} onChange={(e)=>handleColorChange(e.target.value)}/>
         </div>
-
     </div>
   )
 }

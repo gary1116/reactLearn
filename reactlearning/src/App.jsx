@@ -1,12 +1,24 @@
+import { useEffect, useState } from 'react';
 import './App.css'
-import { useState } from 'react';
 import Colopicker from './Colopicker';
 
 function App() {  
+
+  const [count,setCount]=useState(0);
+
+  useEffect(()=>{
+        document.title=`Count:${count+1}`;
+  },[count])
+
+  const incrementCount=()=>{
+    setCount(count+1);
+  }
+
   return (
     <>
     <div className='App'>
-        <Colopicker/>
+    <h1>UseEffect Hook</h1>
+    <button onClick={incrementCount}>Increment</button>
     </div>
     </>
   )
