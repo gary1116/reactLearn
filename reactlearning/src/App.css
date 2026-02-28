@@ -1,0 +1,43 @@
+*{
+  margin: 0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+.color-box{
+  height: 100px;
+  width: 100px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  border: 2px solid black;
+}
+
+.color-pallete{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.custom-color-picker{
+margin-top: 20px;
+}
+
+.custom-color-picker input{
+  
+  height: 10px;
+  width: 50px;
+  border: none;
+padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.custom-color-picker input:hover{
+  background-color: blueviolet;
+}
+.App{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
