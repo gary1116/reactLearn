@@ -1,5 +1,5 @@
 import './App.css'
-import MouseTracker from './MouseTracker';
+import MouseTracker from './Apps/MouseTracker';
 
 function App() {  
 
