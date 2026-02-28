@@ -35,3 +35,9 @@ padding: 10px;
 .custom-color-picker input:hover{
   background-color: blueviolet;
 }
+.App{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
