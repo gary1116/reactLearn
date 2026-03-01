@@ -2,9 +2,6 @@ import './App.css'
 import MouseTracker from './Apps/MouseTracker';
 
 function App() {  
-
-  
-
   return (
     <>
     <div className='App'>
