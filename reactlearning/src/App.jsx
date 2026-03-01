@@ -1,11 +1,12 @@
 import './App.css'
+import DigitalClock from './Apps/DigitalClock';
 import MouseTracker from './Apps/MouseTracker';
 
 function App() {  
   return (
     <>
-    <div className='App'>
-      <MouseTracker />
+    <div>
+<DigitalClock />
     </div>
     </>
   )

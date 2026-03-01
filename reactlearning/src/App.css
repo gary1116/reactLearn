@@ -35,9 +35,25 @@ padding: 10px;
 .custom-color-picker input:hover{
   background-color: blueviolet;
 }
-.App{
-  align-items: center;
-  display: flex;
-  justify-content: center;
+
+.parentDiv{
   min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size:xx-large;
+
+  background-color: aqua;
+}
+
+.time{
+
+  padding: 30px;
+  border-radius: 30px;
+  background-color: #155DFC;
+
+}
+
+.time p{
+  color: #FFB86A;
 }
