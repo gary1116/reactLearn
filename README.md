@@ -13,3 +13,16 @@ learning react step by step
     useEffect(()=>{}); //Run on every render
     useEffect(()=>{},[]); // runs only once after the initial render because it has an empty dependency array
     useEffect(()=>{},[count]); // runs after initial render and when count updates
+
+
+    # UseRef Hook
+    persist values across renders
+    does not cause the component to re-render when the value changes
+
+-     useref hook is used to persist values across renders without      causing the components to rerender when the value changes
+
+how in console the value will be displayed
+it shows as object
+    {
+        current: 'hello, world!!'
+    }

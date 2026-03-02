@@ -1,12 +1,12 @@
 import './App.css'
-import DigitalClock from './Apps/DigitalClock';
-import MouseTracker from './Apps/MouseTracker';
+import LearningUseRef from './Apps/LearningUseRef'
+
 
 function App() {  
   return (
     <>
     <div>
-<DigitalClock />
+      <LearningUseRef />
     </div>
     </>
   )
