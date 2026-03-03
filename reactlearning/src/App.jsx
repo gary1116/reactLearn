@@ -1,12 +1,12 @@
 import './App.css'
-import LearningUseRef from './Apps/LearningUseRef'
+import UseContextDemo from './Apps/UseContextDemo'
 
 
 function App() {  
   return (
     <>
     <div>
-      <LearningUseRef />
+      <UseContextDemo />
     </div>
     </>
   )
