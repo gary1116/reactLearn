@@ -13,8 +13,18 @@ const LearningUseRef = () => {
         refCount.current +=1;
         console.log(`refCount:${refCount.current}`);
     }
+    
+    const inputRef=useRef(null);
+
+    const focusInput=()=>{
+        inputRef.current.focus();
+        inputRef.current.style.backgroundColor='red';
+        console.log(inputRef);
+        
+    }
 
     return (
+        <>
         <div>
             <div className="aligning">
                 <p>UseState Count: {count}</p>
@@ -25,6 +35,11 @@ const LearningUseRef = () => {
                 <button onClick={() => incrementRefCount()} className='button'>increment useRef</button>
             </div>
         </div>
+        <div className="">
+        <input type="text" placeholder='Focus me' ref={inputRef} />
+        <button onClick={focusInput}>Focus</button>
+        </div>
+        </>
     )
 }
 
