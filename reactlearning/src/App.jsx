@@ -1,14 +1,12 @@
 import './App.css'
-import MouseTracker from './Apps/MouseTracker';
+import UseContextDemo from './Apps/UseContextDemo'
+
 
 function App() {  
-
-  
-
   return (
     <>
-    <div className='App'>
-      <MouseTracker />
+    <div>
+      <UseContextDemo />
     </div>
     </>
   )
