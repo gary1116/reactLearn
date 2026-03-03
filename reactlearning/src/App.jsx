@@ -1,12 +1,12 @@
 import './App.css'
-import UseContextDemo from './Apps/UseContextDemo'
+import CustomHooks from './Apps/CustomHooks'
 
 
 function App() {  
   return (
     <>
     <div>
-      <UseContextDemo />
+    <CustomHooks/>
     </div>
     </>
   )

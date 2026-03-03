@@ -64,3 +64,9 @@ Provider is a wrapper that shares data globally inside a component tree.
             const user = useContext(UserContext);
             return <h1>Hello {user}</h1>;
         }
+
+
+# Custom Hooks
+- custom hooks in react are functions that let us re use logic across multiple components
+
+- custom hooks should just start with "use" keyword
