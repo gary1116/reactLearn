@@ -70,3 +70,5 @@ Provider is a wrapper that shares data globally inside a component tree.
 - custom hooks in react are functions that let us re use logic across multiple components
 
 - custom hooks should just start with "use" keyword
+
+

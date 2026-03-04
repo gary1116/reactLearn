@@ -1,12 +1,12 @@
 import './App.css'
-import CustomHooks from './Apps/CustomHooks'
+import ApisPost from './Apps/ApisPost'
 
 
 function App() {  
   return (
     <>
     <div>
-    <CustomHooks/>
+      <ApisPost/>
     </div>
     </>
   )
