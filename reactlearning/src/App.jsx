@@ -1,10 +1,10 @@
 import './App.css'
-import Forms from './Apps/Forms'
+import ReactForms from './Apps/ReactForms'
 
 function App() {  
   return (
     <>
-    <Forms />
+  <ReactForms/>
     </>
   )
 }
