@@ -1,13 +1,10 @@
 import './App.css'
-import ApisPost from './Apps/ApisPost'
-
+import Forms from './Apps/Forms'
 
 function App() {  
   return (
     <>
-    <div>
-      <ApisPost/>
-    </div>
+    <Forms />
     </>
   )
 }
