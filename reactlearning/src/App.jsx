@@ -1,13 +1,10 @@
 import './App.css'
-import UseContextDemo from './Apps/UseContextDemo'
-
+import ReactForms from './Apps/ReactForms'
 
 function App() {  
   return (
     <>
-    <div>
-      <UseContextDemo />
-    </div>
+  <ReactForms/>
     </>
   )
 }
