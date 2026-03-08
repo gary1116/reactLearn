@@ -72,3 +72,38 @@ Provider is a wrapper that shares data globally inside a component tree.
 - custom hooks should just start with "use" keyword
 
 
+# React Forms
+-     const {register, handleSubmit}=useForm();
+  useForm() is a hook from react-hook-form that creates an internal form manager.
+
+| Function       | Purpose                                 |
+| -------------- | --------------------------------------- |
+| `register`     | connects an input to the form system    |
+| `handleSubmit` | handles form submission + collects data |
+
+
+- <input {...register('name')} />
+
+register('name') tells react-hook-form:
+“Track this input and store its value under the key name.”
+
+When the user types:
+
+Name: Gary
+Email: gary@mail.com
+
+React Hook Form automatically stores:
+
+{
+  name: "Gary",
+  Email: "gary@mail.com"
+}
+
+- handleSubmit()
+
+It does several things:
+
+1️⃣ Prevents default form reload
+2️⃣ Collects all registered input values
+3️⃣ Validates them (if rules exist)
+4️⃣ Sends them to your onSubmit
