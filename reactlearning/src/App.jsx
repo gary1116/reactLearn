@@ -1,10 +1,11 @@
 import './App.css'
 import ReactForms from './Apps/ReactForms'
+import TailwindTesting from './Apps/tailwindTesting'
 
 function App() {  
   return (
     <>
-  <ReactForms/>
+    <TailwindTesting />
     </>
   )
 }
