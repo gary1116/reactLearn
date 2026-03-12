@@ -5,6 +5,7 @@ import Home from './Apps/Routing/Home';
 import Contact from './Apps/Routing/Contact';
 import Team from './Apps/Routing/Team';
 import NotFound from './Apps/Routing/NotFound';
+import CurrentLocation from './Apps/Routing/CurrentLocation';
 
 function App() {  
   return (
@@ -17,6 +18,7 @@ function App() {
           <li><Link className='text-white font-thin transition duration-100 inline-block hover:scale-150 hover:text-cyan-600' to={"/contact"}>Contact</Link></li>
         </ul>
       </nav>
+      <CurrentLocation />
       <div className="container mx-auto py-8">
       <Routes>
         <Route path='/' element={<Home/>} />
