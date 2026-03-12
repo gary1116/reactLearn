@@ -4,6 +4,7 @@ import About from './Apps/Routing/About';
 import Home from './Apps/Routing/Home';
 import Contact from './Apps/Routing/Contact';
 import Team from './Apps/Routing/Team';
+import NotFound from './Apps/Routing/NotFound';
 
 function App() {  
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path='team' element={<Team/>} />        
         </Route>
         <Route path='/contact' element={<Contact/>} />
+        <Route path='*' element={<NotFound/>} />
       </Routes>
       </div>
       </div>
