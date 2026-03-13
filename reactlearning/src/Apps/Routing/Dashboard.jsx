@@ -16,8 +16,6 @@ const Dashboard = () => {
     <h2 className='text-6xl text-teal-700'>Welcome to dashboard</h2>
     <p className='text-2xl text-pink-600'>this page is dashboard page</p>
     <button className='text-blue-900 text-2xl cursor-pointer border-2 p-2 bg-blue-400 rounded-lg' onClick={()=>handleLogout()}>go to home</button>
-
-
     </div>
   )
 }
