@@ -207,3 +207,32 @@ if no topic exists → topic = "general"
         /about?topic=Vision
         Now searchParams.get("topic") returns:
         "Vision"
+
+# <Outlet/>
+- Outlet is used in React Router for nested routes.
+It is basically a placeholder where child routes will render.
+
+    <Route path="/about" element={<About />}>
+    <Route path="team" element={<Team />} />
+    <Route path="mission" element={<Mission />} />
+    </Route>
+
+-   Here:
+
+    /about → loads About
+    /about/team → loads Team
+    /about/mission → loads Mission
+    But React Router needs to know where inside About it should render Team or Mission.
+    That’s what Outlet is for.
+    
+        <div className="mt-8 w-full max-w-4xl">
+        <Outlet />
+        </div>
+
+    This means:
+    “Render the nested route component inside this div.”
+- Visual Layout
+    Without Outlet:
+    About Page
+    Choose Topic
+    Child routes won't appear anywhere.

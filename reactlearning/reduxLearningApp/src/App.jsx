@@ -1,13 +1,15 @@
 
 import './App.css'
+import Counter from './Counter'
+import Display from './Display'
 
 function App() {
 
   return (
-    <>
-    <h1 className='text-2xl text-blue-600'>Hi</h1>
-    </>
-  )
+    <div className='min-h-screen flex justify-center items-center'>
+      <Counter />
+      <Display />
+    </div>)
 }
 
 export default App
