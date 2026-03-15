@@ -107,3 +107,132 @@ It does several things:
 2️⃣ Collects all registered input values
 3️⃣ Validates them (if rules exist)
 4️⃣ Sends them to your onSubmit
+
+# searchParams
+
+What useSearchParams() gives you
+
+This hook:
+const [searchParams, setSearchParams] = useSearchParams();
+
+gives you two things:
+
+Variable	Purpose
+searchParams	read query parameters from URL
+setSearchParams	change query parameters
+
+Query parameters are the part after ? in a URL.
+
+Example:
+/about?topic=Team
+
+Here:
+
+topic = Team
+2️⃣ What this line does
+const topic = searchParams.get("topic") || "general";
+
+
+
+- Part 1
+searchParams.get("topic")
+
+This means:
+"Get the value of the URL parameter called topic."
+Example URL:
+/about?topic=Team
+    Then:
+
+        searchParams.get("topic") → "Team"
+        Why "general" is there
+
+    The || operator means:
+        value || fallback
+        If the value is null / undefined / empty, use the fallback.
+
+So this line means:
+topic = searchParams.get("topic")
+if no topic exists → topic = "general"
+
+
+
+
+
+- Why the URL does NOT show ?topic=general initially when you load the page?
+
+        You wrote:
+        const topic = searchParams.get("topic") || "general";
+        Important thing:
+        ⚠️ This line does NOT change the URL.
+        It only creates a variable in JavaScript.
+
+        So when the page loads:
+
+        http://localhost:5173/about
+
+        Then:
+        searchParams.get("topic")
+
+        returns:
+        null
+        Because the URL has no topic parameter.
+
+        Then the || operator runs:
+        const topic = null || "general"
+
+        Result:
+        topic = "general"
+        But the URL remains unchanged.
+
+        So the browser still shows:
+        http://localhost:5173/about
+
+        But inside your React component:
+        topic = "general"
+
+        That’s why the UI shows:
+        Current Topic is general
+        Even though the URL does not contain it.
+
+
+- when topic becomes part of the URL later?
+
+        This happens here:
+        setSearchParams({topic:newTopic});
+
+        Example:
+        handleTopic("Vision")
+        React Router updates the URL to:
+
+        /about?topic=Vision
+        Now searchParams.get("topic") returns:
+        "Vision"
+
+# <Outlet/>
+- Outlet is used in React Router for nested routes.
+It is basically a placeholder where child routes will render.
+
+    <Route path="/about" element={<About />}>
+    <Route path="team" element={<Team />} />
+    <Route path="mission" element={<Mission />} />
+    </Route>
+
+-   Here:
+
+    /about → loads About
+    /about/team → loads Team
+    /about/mission → loads Mission
+    But React Router needs to know where inside About it should render Team or Mission.
+    That’s what Outlet is for.
+    
+        <div className="mt-8 w-full max-w-4xl">
+        <Outlet />
+        </div>
+
+    This means:
+    “Render the nested route component inside this div.”
+- Visual Layout
+    Without Outlet:
+    About Page
+    Choose Topic
+    Child routes won't appear anywhere.
