@@ -1,23 +1,17 @@
 
 
 export const fetchPostRequest=()=>({
- 
     type:"FETCH_POSTS_REQUEST"
-    
 })
 
 export const fetchPostSuccess=(post)=>({
- 
     type:"FETCH_POSTS_SUCCESS",
     payload:post,
-    
 });
 
 export const fetchPostFailure=(error)=>({
- 
     type:"FETCH_POSTS_FAILURE",
     payload:error,
-    
 });
 
 

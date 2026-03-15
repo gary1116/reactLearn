@@ -2,7 +2,7 @@
 
 
 const initialState={
-        post:[],
+        posts:[],
         loading:false,
         error:null
 }
@@ -21,14 +21,14 @@ export const PostReducer=(state=initialState,action)=>{
             return {
                 ...state,
                 loading:false,
-                post:action.payload
+                posts:action.payload
                 
             }
 
         case 'FETCH_POSTS_FAILURE':
             return {
                 ...state,
-                loading:true,
+                loading:false,
                 error:action.payload
             }
 

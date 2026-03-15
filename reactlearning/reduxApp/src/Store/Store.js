@@ -5,7 +5,7 @@ import { PostReducer } from "./reducers/PostReducer";
 
 const initialState={
     post:{
-        post:[],
+        posts:[],
         loading:false,
         error:null
     }
