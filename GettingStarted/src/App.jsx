@@ -19,9 +19,14 @@ function App() {
 
   const element=<h1>{isLoggedIn ? 'Welcome back!' : 'Please sign up.'}</h1>
  
+  function Greeting(name){
+    return <h1>Hello, {name}!</h1>
+  }
+
   return (
     <div className="">
     {element}
+    {Greeting('John')}
     </div>
   )
 
