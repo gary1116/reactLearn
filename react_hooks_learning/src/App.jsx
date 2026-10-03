@@ -1,19 +1,16 @@
-/*
-JSX is a syntax extension for JavaScript that allows you to write HTML-like code within your JavaScript files.
-It is commonly used with React to define the structure and appearance of components.
-JSX makes it easier to visualize the UI and manage the component's state and behavior in a more intuitive way.
-
-*/
-
+import {useState} from 'react'
 import './App.css'
 
 function App() {
 
+    const [count, setCount] = useState(0);
 
   return (
  <>
  <div className="app-container">
-    <h1>Helllo!</h1>
+    <h1>Counter value:- {count}!</h1>
+    <button onClick={()=>setCount(count+1)} style={{margin:'10px', padding:'10px',border:'1px solid #5feea7d3', borderRadius:'5px'}}>Increment</button>
+    <button onClick={()=>setCount(count-1)} style={{margin:'10px', padding:'10px',border:'1px solid #5fe0eed3', borderRadius:'5px'}}>Decrement</button>
  </div>
  </>
   )
