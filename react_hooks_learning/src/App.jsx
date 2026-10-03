@@ -21,7 +21,8 @@ function App() {
     <h1>Counter value:- {count}!</h1>
     <input type="number"
     value={step}
-    onChange={(e)=>stepChange(e)}/>
+    onChange={(e)=>stepChange(e)}
+    style={{margin:"10px", padding:"10px", borderRadius:"10px", border:"none" }}/>
     <button onClick={()=>increment()} style={{margin:'10px', padding:'10px',border:'1px solid #5feea7d3', borderRadius:'5px'}}>Increment</button>
     <button onClick={()=>setCount(count-step)} style={{margin:'10px', padding:'10px',border:'1px solid #5fe0eed3', borderRadius:'5px'}}>Decrement</button>
  </div>
