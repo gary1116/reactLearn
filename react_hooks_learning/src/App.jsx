@@ -3,28 +3,35 @@ import './App.css'
 
 function App() {
 
-    const [count, setCount] = useState(0);
-    const [step,setStep]=useState(1);
-
-    const increment=()=>{
-        setCount(count+step);
+    const [counters,setCounters]=useState([{
+        id:1,
+        value:0
+    }])
+    const addCounters=()=>{
+        setCounters([...counters,{id: counters.length + 1, value: 0}])
     }
-
-    const stepChange=(e)=>{
-        console.log(e);
-        setStep(Number(e.target.value));
+    const incrementCounter=(id)=>{
+        setCounters(counters.map(counter=>counter.id===id ? {...counter, value: counter.value + 1} : counter))
     }
 
   return (
  <>
  <div className="app-container">
-    <h1>Counter value:- {count}!</h1>
-    <input type="number"
-    value={step}
-    onChange={(e)=>stepChange(e)}
-    style={{margin:"10px", padding:"10px", borderRadius:"10px", border:"none" }}/>
-    <button onClick={()=>increment()} style={{margin:'10px', padding:'10px',border:'1px solid #5feea7d3', borderRadius:'5px'}}>Increment</button>
-    <button onClick={()=>setCount(count-step)} style={{margin:'10px', padding:'10px',border:'1px solid #5fe0eed3', borderRadius:'5px'}}>Decrement</button>
+    <button onClick={addCounters}>Add Counter</button>
+    <ul>
+        {counters.map((counter)=>(
+            <li  key={counter.id}>
+                Counter {counter.id}: {counter.value} 
+                <button
+                style={{margin:"10px", padding:"5px"}} 
+                onClick={()=>incrementCounter(counter.id)}>
+                Increment</button>
+
+            </li>
+        )
+            
+        )}
+    </ul>
  </div>
  </>
   )
